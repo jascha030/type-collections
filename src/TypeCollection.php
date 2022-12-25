@@ -11,16 +11,12 @@ namespace Jascha030\TypeCollections;
  */
 class TypeCollection extends TypeCollectionAbstract
 {
-    private string $class;
-
     /**
      * @param class-string         $class
      * @param array|iterable|mixed $items
      */
-    public function __construct(string $class, $items = [])
+    public function __construct(private string $class, $items = [])
     {
-        $this->class = $class;
-
         parent::__construct($items);
     }
 

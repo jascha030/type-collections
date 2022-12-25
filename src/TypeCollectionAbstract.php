@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Jascha030\TypeCollections;
 
+use Closure;
 use Generator;
 use Illuminate\Support\Collection;
 use Illuminate\Support\LazyCollection;
@@ -46,7 +47,7 @@ abstract class TypeCollectionAbstract extends Collection implements TypeCollecti
     /**
      * {@inheritDoc}
      */
-    public function validate($item): bool
+    public function validate(mixed $item): bool
     {
         $class = $this->getType();
 
@@ -61,7 +62,7 @@ abstract class TypeCollectionAbstract extends Collection implements TypeCollecti
     /**
      * @param array|iterable|mixed $items
      */
-    private function wrapWithClosure($items): \Closure
+    private function wrapWithClosure(mixed $items): Closure
     {
         return function () use ($items): Generator {
             yield from (new Collection($items))

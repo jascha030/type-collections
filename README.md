@@ -6,7 +6,7 @@ A small set of interfaces and an abstract implementation, extending the [Collect
 
 ### Prerequisites
 
-* PHP `^7.4|^8.0.0|^8.1`
+* PHP `>=8.0.2`
 
 Having the `phpstan/phpstan` composer package installed globally is not required, but useful.
 

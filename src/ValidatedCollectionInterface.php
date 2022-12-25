@@ -17,8 +17,6 @@ interface ValidatedCollectionInterface extends IteratorAggregate
 {
     /**
      * Filter callback, validates if a provided item is allowed to be added to the Collection.
-     *
-     * @param mixed $item
      */
-    public function validate($item): bool;
+    public function validate(mixed $item): bool;
 }

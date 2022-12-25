@@ -20,6 +20,7 @@
     },
     "minimum-stability": "stable",
     "require": {
+        "php": "~8.0||~8.1||~8.2",
         "illuminate/collections": "^9.45"
     },
     "require-dev": {
@@ -27,6 +28,11 @@
         "bamarni/composer-bin-plugin": "^1.8"
     },
     "config": {
+        "platform-check": false,
+        "platform": {
+            "php": "8.0.2"
+        },
+        "sort-packages": true,
         "allow-plugins": {
             "bamarni/composer-bin-plugin": true
         }
