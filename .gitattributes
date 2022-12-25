@@ -1,0 +1,10 @@
+.github/ export-ignore
+.php-cs-fixer.php export-ignore
+.var export-ignore
+.phive export-ignore
+phpstan.neon export-ignore
+phpunit.xml export-ignore
+vendor-bin export-ignore
+vendor export-ignore
+tests export-ignore
+
