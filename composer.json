@@ -31,6 +31,19 @@
             "bamarni/composer-bin-plugin": true
         }
     },
+    "archive": {
+        "exclude": [
+            ".phive",
+            ".var",
+            "tests",
+            "tools",
+            "vendor-bin",
+            ".editorconfig",
+            ".php-cs-fixer.php",
+            "phpstan.neon",
+            "phpunit.xml"
+        ]
+    },
     "extra": {
         "bamarni-bin": {
             "bin-links": true,
