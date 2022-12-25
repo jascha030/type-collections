@@ -1,0 +1,53 @@
+{
+    "name": "jascha030/type-collections",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jascha030",
+            "email": "contact@jaschavanaalst.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Jascha030\\TypeCollections\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jascha030\\TypeCollections\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "illuminate/collections": "^9.45"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "bamarni/composer-bin-plugin": "^1.8"
+    },
+    "config": {
+        "allow-plugins": {
+            "bamarni/composer-bin-plugin": true
+        }
+    },
+    "extra": {
+        "bamarni-bin": {
+            "bin-links": true,
+            "forward-command": false
+        }
+    },
+    "scripts": {
+        "phpunit": "vendor/bin/phpunit",
+        "php-cs-fixer": "tools/php-cs-fixer",
+        "phpstan": "tools/phpstan",
+        "test": "@phpunit -c phpunit.xml",
+        "analyze": "@phpstan analyze -c phpstan.neon",
+        "format": "@php-cs-fixer fix --config=.php-cs-fixer.php"
+    },
+    "scripts-descriptions": {
+        "test": "Run phpunit with config phpunit.xml",
+        "format": "Run php-cs-fixer with config .php-cs-fixer.php",
+        "analyze": "Run phpstan with config phpstan.neon"
+    }
+}
